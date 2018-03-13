@@ -91,8 +91,6 @@
         <mkdir dir="${lib.dir}"/>
         <mkdir dir="${build.classes.dir}"/>
         <mkdir dir="${build.archives.dir}"/>
-        <mkdir dir="${build.exploded.dir}"/>
-		<mkdir dir="${lib.dir}"/>
         <mkdir dir="${tmp.dir}"/>
         <mkdir dir="${web.dir}"/>
 	</target>
