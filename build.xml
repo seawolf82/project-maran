@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<project name="project-maran" basedir=".." default="02.print.properties">
+<project name="project-maran" basedir="." default="02.print.properties">
 
 	<!-- ================ -->
 	<!-- Properties setup -->
@@ -84,11 +84,9 @@
 		name="04.prepare" depends="03.clean"
 		description="Creates project structure, if needed"
 	>
-        <mkdir dir="${src.dir}"/>
-        <mkdir dir="${lib.dir}"/>
+      
         <mkdir dir="${build.classes.dir}"/>
         <mkdir dir="${build.archives.dir}"/>
-        <mkdir dir="${web.dir}"/>
 	</target>
     
 	<target 
