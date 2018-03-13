@@ -16,8 +16,8 @@
 		<!-- Project properties -->
 		<property file="project.properties"/>
 		<!-- Project structure -->
-	  	<property name="src.dir" value="${src.dir}/src"/>
-	    <property name="build.dir" value="${build.dir}/build"/>
+	  	<property name="src.dir" value="src"/>
+	    <property name="build.dir" value="build"/>
 	    <property name="build.classes.dir" value="${build.dir}/classes"/>
 	    <property name="build.archives.dir" value="${build.dir}/archives"/>
 		<property name="lib.dir" value="${lib.dir}"/>
