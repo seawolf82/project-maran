@@ -16,12 +16,12 @@
 		<!-- Project properties -->
 		<property file="ant/project.properties"/>
 		<!-- Project structure -->
-	    <property name="src.dir" value="src"/>
-	    <property name="test.dir" value="test"/>
-		<property name="build.dir" value="build"/>
-	    <property name="build.classes.dir" value="${build.dir}/classes"/>
-	    <property name="build.archives.dir" value="${build.dir}/archives"/>
-	    <property name="build.exploded.dir" value="${build.dir}/exploded"/>
+	  	<property name="src.dir" value="src"/>
+	    	<property name="test.dir" value="test"/>
+	    	<property name="build.dir" value="build"/>
+	    	<property name="build.classes.dir" value="${build.dir}/classes"/>
+	    	<property name="build.archives.dir" value="${build.dir}/archives"/>
+	    	<property name="build.exploded.dir" value="${build.dir}/exploded"/>
 		<property name="lib.dir" value="${lib.dir}"/>
 		<property name="tmp.dir" value="tmp"/>
 		<property name="web.dir" value="WebContent"/>
@@ -118,7 +118,6 @@
             </fileset>
         	<zipfileset dir="${build.classes.dir}" prefix="WEB-INF/classes"/>
         </war>
-		<!--unwar src="${build.archives.dir}/${ant.project.name}.war" dest="${build.exploded.dir}/${ant.project.name}"/!-->
     </target>
 
 	<target name="08.undeploy" depends="00.init.properties" >
