@@ -74,8 +74,7 @@
 	<!-- ============= -->
 
 	<target 
-		name="03.clean" depends="00.init.properties"
-		description="Creates project structure, if needed"
+		name="03.clean"	description="Creates project structure, if needed"
 	>
         <delete dir="${build.dir}"/>
 	</target>
@@ -112,7 +111,7 @@
         </war>
     </target>
 
-	<target name="07.undeploy" depends="00.init.properties" description="Undeploy and delete war file" >
+	<target name="07.undeploy" description="Undeploy and delete war file" >
 		<delete file="${deploy.path}/${ant.project.name}.war"/>
 		<delete dir="${deploy.path}/${ant.project.name}"/>
     </target>
@@ -124,5 +123,7 @@
             </fileset>
         </copy>
     </target>
+	<target name="all" depends="00.init.properties,01.set.classpath,03.clean,04.prepare,05.build,06.package,07.undeploy,08.deploy.war">
+	</target>
 
 </project>
