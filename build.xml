@@ -94,7 +94,7 @@
 		description="Compile main source tree java files"
     >
         <mkdir dir="${build.classes.dir}"/>
-        <javac destdir="${build.classes.dir}" debug="false"
+        <javac destdir="${build.classes.dir}" debug="false" includeantruntime="false"
 		deprecation="false" optimize="false" failonerror="true">
             <src path="${src.dir}"/>
             <classpath refid="ant-classpath"/>
