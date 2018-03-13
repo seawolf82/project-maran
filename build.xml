@@ -12,18 +12,17 @@
 	>
 		<echo message="Ricordarsi di impostare correttamente le proprieta' nel file ant/environment.properties !!!"/>
 		<!-- Environment properties -->
-		<property file="ant/environment.properties"/>
+		<property file="environment.properties"/>
 		<!-- Project properties -->
-		<property file="ant/project.properties"/>
+		<property file="project.properties"/>
 		<!-- Project structure -->
-	  	<property name="src.dir" value="src"/>
-	    	<property name="test.dir" value="test"/>
-	    	<property name="build.dir" value="build"/>
-	    	<property name="build.classes.dir" value="${build.dir}/classes"/>
-	    	<property name="build.archives.dir" value="${build.dir}/archives"/>
-			<property name="lib.dir" value="/opt/jboss/jboss-4.0.5.GA/server/default/lib/"/>
-			<property name="deploy.path" value="/opt/jboss/jboss-4.0.5.GA/server/default/deploy/" />
-			<property name="web.dir" value="WebContent"/>
+	  	<property name="src.dir" value="${src.dir}/src"/>
+	    <property name="build.dir" value="${build.dir}/build"/>
+	    <property name="build.classes.dir" value="${build.dir}/classes"/>
+	    <property name="build.archives.dir" value="${build.dir}/archives"/>
+		<property name="lib.dir" value="${lib.dir}"/>
+		<property name="deploy.path" value="${deploy.path}" />
+		<property name="web.dir" value="${web.dir}/WebContent"/>
 	</target>
     
 	<target 
@@ -106,7 +105,7 @@
 
     
     <target name="06.package" depends="05.build" description="Create a war file" >
-        <war destfile="${build.archives.dir}/${ant.project.name}.war" webxml="${web.dir}/src/WEB-INF/web.xml">
+        <war destfile="${build.archives.dir}/${ant.project.name}.war" webxml="${web.dir}/WEB-INF/web.xml">
             <fileset dir="${web.dir}">
                 <include name="**/*.*"/>
             	<exclude name="WEB-INF/web.xml" />
