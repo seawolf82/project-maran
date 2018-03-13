@@ -123,7 +123,7 @@
 		<delete dir="${deploy.path}/${ant.project.name}"/>
     </target>
 
-	<target name="08.deploy.war" depends="08.undeploy, 07.package" description="Deploy a war file into jboss directory" >
+	<target name="08.deploy.war" depends="07.undeploy, 06.package" description="Deploy a war file into jboss directory" >
     	<copy todir="${deploy.path}" preservelastmodified="true">
             <fileset dir="${build.archives.dir}">
                 <include name="${ant.project.name}.war"/>
