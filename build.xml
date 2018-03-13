@@ -22,7 +22,7 @@
 	    <property name="build.archives.dir" value="${build.dir}/archives"/>
 		<property name="lib.dir" value="${lib.dir}"/>
 		<property name="deploy.path" value="${deploy.path}" />
-		<property name="web.dir" value="${web.dir}/WebContent"/>
+		<property name="web.dir" value="WebContent"/>
 	</target>
     
 	<target 
