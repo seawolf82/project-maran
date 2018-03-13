@@ -108,7 +108,7 @@
 	</target>
 
     
-    <target name="07.package" depends="05.build" >
+    <target name="06.package" depends="05.build" description="Create a war file" >
         <war destfile="${build.archives.dir}/${ant.project.name}.war" webxml="${web.dir}/WEB-INF/web.xml">
             <fileset dir="${web.dir}">
                 <include name="**/*.*"/>
@@ -118,12 +118,12 @@
         </war>
     </target>
 
-	<target name="08.undeploy" depends="00.init.properties" >
+	<target name="07.undeploy" depends="00.init.properties" description="Undeploy and delete war file" >
 		<delete file="${deploy.path}/${ant.project.name}.war"/>
 		<delete dir="${deploy.path}/${ant.project.name}"/>
     </target>
 
-	<target name="09a.deploy.war" depends="08.undeploy, 07.package" >
+	<target name="08.deploy.war" depends="08.undeploy, 07.package" description="Deploy a war file into jboss directory" >
     	<copy todir="${deploy.path}" preservelastmodified="true">
             <fileset dir="${build.archives.dir}">
                 <include name="${ant.project.name}.war"/>
