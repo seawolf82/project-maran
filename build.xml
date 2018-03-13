@@ -21,10 +21,9 @@
 	    	<property name="build.dir" value="build"/>
 	    	<property name="build.classes.dir" value="${build.dir}/classes"/>
 	    	<property name="build.archives.dir" value="${build.dir}/archives"/>
-	    	<property name="build.exploded.dir" value="${build.dir}/exploded"/>
-		<property name="lib.dir" value="${lib.dir}"/>
-		<property name="tmp.dir" value="tmp"/>
-		<property name="web.dir" value="WebContent"/>
+			<property name="lib.dir" value="/opt/jboss/jboss-4.0.5.GA/server/default/lib/"/>
+			<property name="deploy.path" value="/opt/jboss/jboss-4.0.5.GA/server/default/deploy/" />
+			<property name="web.dir" value="WebContent"/>
 	</target>
     
 	<target 
@@ -80,7 +79,6 @@
 		description="Creates project structure, if needed"
 	>
         <delete dir="${build.dir}"/>
-        <delete dir="${tmp.dir}" includes="**"/>
 	</target>
 
 	<target 
@@ -91,7 +89,6 @@
         <mkdir dir="${lib.dir}"/>
         <mkdir dir="${build.classes.dir}"/>
         <mkdir dir="${build.archives.dir}"/>
-        <mkdir dir="${tmp.dir}"/>
         <mkdir dir="${web.dir}"/>
 	</target>
     
