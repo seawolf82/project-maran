@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<project name="project-maran" basedir="." default="02.print.properties">
+<project name="project-maran" basedir="." default="all">
 
 	<!-- ================ -->
 	<!-- Properties setup -->
