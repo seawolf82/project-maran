@@ -123,7 +123,7 @@
             </fileset>
         </copy>
     </target>
-	<target name="all" depends="00.init.properties,01.set.classpath,03.clean,04.prepare,05.build,06.package,07.undeploy,08.deploy.war">
-	</target>
+	<target name="all" depends="00.init.properties, 01.set.classpath, 03.clean, 04.prepare, 05.build, 06.package, 07.undeploy, 08.deploy.war" />
+	
 
 </project>
